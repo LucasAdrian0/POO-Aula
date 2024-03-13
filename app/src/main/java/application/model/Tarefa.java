@@ -11,8 +11,17 @@ public class Tarefa extends AbstractAtividade{
         return this.concluido;
     }
 
+    public void serConcluido(){
+        this.concluido = !this.concluido;
+    }
+    
     @Override
     public String getDetalhe(){
         return "[T]" + this.getDescricao();
     }
+
+    public Tarefa(String descricao){
+        this.setDescricao(descricao);
+    }
+    public Tarefa(){}
 }

@@ -8,7 +8,7 @@ public class App {
         t.setDescricao("Teste de Tarefa");
         t.setConcluido(false);
 
-        System.out.println(t.getDescricao());
+        System.out.println(t.getDetalhe());
         System.out.println(t.getConcluido());
 
     }
