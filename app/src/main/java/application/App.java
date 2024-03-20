@@ -1,5 +1,10 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import application.model.AbstractAtividade;
+import application.model.Compromisso;
 import application.model.Tarefa;
 
 public class App {
@@ -8,8 +13,24 @@ public class App {
         t.setDescricao("Teste de Tarefa");
         t.setConcluido(false);
 
-        System.out.println(t.getDetalhe());
+        System.out.println(t.getDetalhes());
         System.out.println(t.getConcluido());
+
+        Compromisso c = new Compromisso();
+        c.setDescricao("Periodo de Avaliação");
+        c.setDataInicial(21,03,2024);
+        c.setDataFinal(22,03,2024);
+
+        System.out.println(c.getDetalhes());
+
+        List<AbstractAtividade> listaAtividades= new ArrayList<AbstractAtividade>();
+        listaAtividades.add(t);
+        listaAtividades.add(c);
+
+        System.out.println("----------[Lista]----------");
+        for(AbstractAtividade a : listaAtividades) {
+            System.out.println(a.getDetalhes());
+        }
 
     }
 }

@@ -16,7 +16,7 @@ public class Tarefa extends AbstractAtividade{
     }
     
     @Override
-    public String getDetalhe(){
+    public String getDetalhes(){
         return "[T]" + this.getDescricao();
     }
 
